@@ -1,0 +1,14 @@
+c:\users\didon\onedrive\documents\visual studio 2015\Projects\WpfTreeView\WpfTreeView\bin\Debug\WpfTreeView.exe.config
+c:\users\didon\onedrive\documents\visual studio 2015\Projects\WpfTreeView\WpfTreeView\bin\Debug\WpfTreeView.exe
+c:\users\didon\onedrive\documents\visual studio 2015\Projects\WpfTreeView\WpfTreeView\bin\Debug\WpfTreeView.pdb
+c:\users\didon\onedrive\documents\visual studio 2015\Projects\WpfTreeView\WpfTreeView\obj\Debug\WpfTreeView.csprojResolveAssemblyReference.cache
+c:\users\didon\onedrive\documents\visual studio 2015\Projects\WpfTreeView\WpfTreeView\obj\Debug\MainWindow.g.cs
+c:\users\didon\onedrive\documents\visual studio 2015\Projects\WpfTreeView\WpfTreeView\obj\Debug\App.g.cs
+c:\users\didon\onedrive\documents\visual studio 2015\Projects\WpfTreeView\WpfTreeView\obj\Debug\WpfTreeView_MarkupCompile.cache
+c:\users\didon\onedrive\documents\visual studio 2015\Projects\WpfTreeView\WpfTreeView\obj\Debug\WpfTreeView_MarkupCompile.lref
+c:\users\didon\onedrive\documents\visual studio 2015\Projects\WpfTreeView\WpfTreeView\obj\Debug\MainWindow.baml
+c:\users\didon\onedrive\documents\visual studio 2015\Projects\WpfTreeView\WpfTreeView\obj\Debug\WpfTreeView.g.resources
+c:\users\didon\onedrive\documents\visual studio 2015\Projects\WpfTreeView\WpfTreeView\obj\Debug\WpfTreeView.Properties.Resources.resources
+c:\users\didon\onedrive\documents\visual studio 2015\Projects\WpfTreeView\WpfTreeView\obj\Debug\WpfTreeView.csproj.GenerateResource.Cache
+c:\users\didon\onedrive\documents\visual studio 2015\Projects\WpfTreeView\WpfTreeView\obj\Debug\WpfTreeView.exe
+c:\users\didon\onedrive\documents\visual studio 2015\Projects\WpfTreeView\WpfTreeView\obj\Debug\WpfTreeView.pdb
