@@ -2,6 +2,7 @@
 using System.IO;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Input;
 
 namespace WpfTreeView
 {
@@ -20,8 +21,24 @@ namespace WpfTreeView
             InitializeComponent();
 
             this.DataContext = new DirectoryStructureViewModel();
+            this.PreviewKeyDown += new KeyEventHandler(CloseOnEscape);
         }
 
         #endregion
+
+        private void Window_ContentRendered(object sender, System.EventArgs e)
+        {
+
+        }
+
+        private void btnDialogOk_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+        private void CloseOnEscape(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Escape)
+                Close();
+        }
     }
 }

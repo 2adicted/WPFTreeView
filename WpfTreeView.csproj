@@ -62,6 +62,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="StartWindow.xaml.cs">
+      <DependentUpon>StartWindow.xaml</DependentUpon>
+    </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -83,8 +86,17 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Resources\Theme.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="StartWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MultiSelectTreeView\MultiSelectTreeView.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -118,12 +130,12 @@
     </Resource>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\drive.ico" />
-    <Resource Include="Images\file.ico" />
-    <Resource Include="Images\folder-open.ico" />
+    <Resource Include="Resources\Images\drive.ico" />
+    <Resource Include="Resources\Images\file.ico" />
+    <Resource Include="Resources\Images\folder-open.ico" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\folder-closed.ico" />
+    <Resource Include="Resources\Images\folder-closed.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Fody.3.3.2\build\Fody.targets" Condition="Exists('..\packages\Fody.3.3.2\build\Fody.targets')" />

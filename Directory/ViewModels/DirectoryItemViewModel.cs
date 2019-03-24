@@ -1,4 +1,5 @@
 ﻿using System.Collections.ObjectModel;
+using System.IO;
 using System.Linq;
 using System.Windows.Input;
 
@@ -26,7 +27,12 @@ namespace WpfTreeView
         /// <summary>
         /// The name of this directory item
         /// </summary>
-        public string Name { get { return this.Type == DirectoryItemType.Drive ? this.FullPath : DirectoryStructure.GetFileFolderName(this.FullPath); } }
+        public string Name { get { return this.Type == DirectoryItemType.Drive ?
+                    string.Format("{0} ({1})", string.IsNullOrEmpty(new DriveInfo(this.FullPath).VolumeLabel.ToString()) ? 
+                        "Local Disk" : 
+                        new DriveInfo(this.FullPath).VolumeLabel.ToString()
+                    , this.FullPath.Remove(this.FullPath.Length - 1)) : 
+                    DirectoryStructure.GetFileFolderName(this.FullPath); } }
 
         /// <summary>
         /// A list of all children contained inside this item
@@ -56,6 +62,16 @@ namespace WpfTreeView
                 // If the UI tells us to close
                 else
                     this.ClearChildren();
+            }
+        }
+        private bool _isSelected;
+        public virtual bool IsSelected
+        {
+            get { return _isSelected; }
+            set
+            {
+                _isSelected = value;
+                //OnPropertyChanged(() => IsSelected);
             }
         }
 

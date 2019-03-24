@@ -14,6 +14,7 @@ namespace WpfTreeView
         /// A list of all directories on the machine
         /// </summary>
         public ObservableCollection<DirectoryItemViewModel> Items { get; set; }
+        public ObservableCollection<DirectoryItemViewModel> SelectedItems { get; set; }
 
         #endregion
 
@@ -31,6 +32,8 @@ namespace WpfTreeView
             this.Items = new ObservableCollection<DirectoryItemViewModel>(
                 children
                 .Select(drive => new DirectoryItemViewModel(drive.FullPath, DirectoryItemType.Drive)).OrderBy(drive => drive.FullPath, new NaturalStringComparer()));
+
+            this.SelectedItems = new ObservableCollection<DirectoryItemViewModel>();
         }
 
         #endregion
