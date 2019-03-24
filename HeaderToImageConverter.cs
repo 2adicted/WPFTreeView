@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Globalization;
-using System.IO;
+using System.Linq;
 using System.Windows.Data;
 using System.Windows.Media.Imaging;
 
@@ -16,7 +16,17 @@ namespace WpfTreeView
 
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
-            return new BitmapImage(new Uri($"pack://application:,,,/Images/{value}.png"));
+            //return new BitmapImage(new Uri($"pack://application:,,,/Images/{value}.ico"));
+            //return BitmapFrame.Create(new Uri($"pack://application:,,,/Images/{value}.ico"));
+
+            string Source = $"pack://application:,,,/Images/{value}.ico";
+
+            var decoder = BitmapDecoder.Create(new Uri(Source),
+                                               BitmapCreateOptions.DelayCreation,
+                                               BitmapCacheOption.OnDemand);
+
+            var result = decoder.Frames.SingleOrDefault(f => f.Width == 16);
+            return result;
         }
 
         public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
